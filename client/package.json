@@ -22,7 +22,6 @@
     "react-router-transition": "^2.1.0",
     "react-scripts": "^5.0.1",
     "react-svg": "^15.1.7",
-    "react-transition-group": "^4.4.5",
     "reactstrap": "^9.1.4",
     "redux": "^4.2.0",
     "redux-devtools-extension": "^2.13.9",

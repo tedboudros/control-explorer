@@ -1,9 +1,9 @@
-import Home from "pages/home-screen";
+import Explorer from "pages/explorer";
 
 export default [
   {
     path: "/",
-    component: Home,
+    component: Explorer,
     isExact: true,
   },
 ];
