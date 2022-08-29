@@ -1,0 +1,81 @@
+@import "../fonts/Oxygen";
+
+@import "./abstracts/variables";
+
+@import "./dist/auroral.min.css";
+
+@import "./pages/home/index";
+@import "./pages/welcome/index";
+
+@import "./components/app";
+@import "./components/button";
+@import "./components/modal";
+@import "./components/list";
+@import "./components/drawer";
+@import "./components/loader";
+@import "./components/page";
+@import "./components/info-card";
+
+.background {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.route-wrapper {
+  position: relative;
+}
+
+.route-wrapper > div {
+  position: absolute;
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+.page {
+  position: absolute;
+
+  & > div {
+    will-change: transition;
+  }
+
+  &-enter {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+
+  &-enter-active {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 300ms, transform 300ms;
+  }
+
+  &-exit {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  &-exit-active {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 300ms, transform 300ms;
+  }
+}
+
+* {
+  z-index: 0;
+}
+
+body {
+  overflow: hidden;
+  margin: 0;
+  cursor: none !important;
+  font-family: "Oxygen", sans-serif;
+}
+
+html,
+body {
+  background: #000;
+}

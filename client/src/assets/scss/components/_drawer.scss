@@ -1,0 +1,60 @@
+.drawer {
+  height: calc(100% - 2rem);
+  margin: 1rem 1.75rem;
+  border-radius: 0.75rem;
+  padding: 0 1.5rem;
+  width: 20rem;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(30px);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.45);
+  transform: translateX(calc(-100% - 3.5rem));
+  transition: 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+  border: 1px solid rgba($white, 0.05);
+  color: $white;
+
+  &__container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    //justify-content: flex-end;
+  }
+
+  &.active {
+    transform: translateX(0);
+  }
+
+  &__backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: none;
+    transition: background-color 0.2s ease-in-out;
+
+    &.active {
+      //backdrop-filter: blur(2px);
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  &__title {
+    width: 100%;
+    color: $white;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    line-height: 18px;
+    font-size: 18px;
+  }
+
+  &__inner {
+    padding: 1.5rem 0;
+    height: 100%;
+  }
+}
